@@ -3,8 +3,8 @@ const app = express();
 const port = 3000;
 
 app.get('/hello', (req, res) => {
-    console.log('Hello ' + req.query.username);
-    res.send('world')
+    console.log(req.query);
+    res.send('Hello ' + req.query.username);
 });
 app.get('/add', (req, res) => res.send('0'));
 
